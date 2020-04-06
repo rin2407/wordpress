@@ -59,3 +59,35 @@ if( !function_exists('theme_setup')){
     }
     add_action('init','theme_setup');
 }
+/*template function */
+if(!function_exists('theme_header')){
+    function theme_header(){
+        ?>
+<div class="site-name">
+    <?php
+        if( is_home()){
+         printf('<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',get_bloginfo('url'),get_bloginfo('description'),get_bloginfo('sitename'));   
+        }else{
+         printf('<p><a href="%1$s" title="%2$s">%3$s</a></p>',get_bloginfo('url'),get_bloginfo('description'),get_bloginfo('sitename'));
+        }
+        ?>
+</div>
+<div class="site-description">
+<?php bloginfo('description'); ?>
+</div>
+<?php
+}
+}
+/**
+ * thiet lap menu
+ */
+if(!function_exists('theme_menu')){
+    function theme_menu($menu){
+       $menu=array(
+           'theme_location'=> $menu,
+           'container' => 'nav',
+           'container_class' => $menu
+       );
+       wp_nav_menu($menu);
+    }
+}
