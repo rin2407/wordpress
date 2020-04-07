@@ -164,7 +164,7 @@ if(!function_exists('theme_entry_meta')){
 /* theme_entry-content */
 if(!function_exists('theme_entry_content')){
     function theme_entry_content(){
-     if(!is_single()){
+     if(!is_single() && !is_page()){
          the_excerpt(); //phần rút gọn nội dung
      }else{
          the_content();
@@ -183,6 +183,7 @@ function read_more(){
     return '<a class="read-more" href="'. get_permalink( get_the_ID()) .'">'. __('...[Read more]'. '</a>');
 }
 add_filter('excerpt_more','read_more');
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 /* theme_entry_tag */
 if(!function_exists('theme_entry_tag')){
     function theme_entry_tag(){
