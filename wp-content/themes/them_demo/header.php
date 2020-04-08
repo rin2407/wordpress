@@ -67,7 +67,7 @@
                             <P>Select a hotel or resort</P>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
-                            <h5>CHECK IN - CHECK OUT</h5>
+                            <h5>CHECK IN-CHECK OUT</h5>
                             <P>Wed Apr 08 - Thu Apr 09</P>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
