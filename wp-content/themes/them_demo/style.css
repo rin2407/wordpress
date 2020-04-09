@@ -1,6 +1,6 @@
 /* 
-* Theme Name:theme demo
-*Description: demo
+* Theme Name: rinnv 2020
+*Description: theme trainning
 *Theme URI: 
 *version: 1.0
 *Author: rinnv
@@ -27,7 +27,7 @@ a{
     text-decoration: none;
 }
 a:hover ,a:visited{
-/* color:#ff1f00; */
+color:#ff1f00;
 text-decoration: underline;
 }
 input,input[type="submit"],button{
@@ -106,7 +106,7 @@ table ,table tr,table td{
     border-top: 1px solid #e8e8e8;
 }
 .post .entry-thumbnail{
-    width:150px;
+    width:100%;
     float: left;
     margin: 2.2em 2em 1em 0;
 }
@@ -292,7 +292,7 @@ blockquote.right {
 .widget_calendar table caption {
         font-weight: bold;
         font-size: 1.1em;
-}
+} 
 /* .search-sec{
     padding: 2rem;
 }
@@ -318,9 +318,13 @@ blockquote.right {
 } */
 /*===================hearder===*/
 /*===========logo menu==========*/
+.sf-arrows .sf-with-ul {
+    
+    padding-right: 0px !important;
+}
 .image img{
     margin-left:50px;
-    width:250px !important;
+    width:200px !important;
 }
 ul#menu,
 		ul#menu ul#sub {
@@ -398,12 +402,15 @@ ul#menu,
 /*================menu============*/
 .menu{
     z-index: 100000;
-    top: 25px;
+    top: 30px;
     position: absolute;
-    width: 100%;
+    width:100%;
+}
+.menu-header{
+    margin-top:30px;
 }
 .menu .sf-menu{
-    position: relative !important;
+    position: relative;
 }
 .menu .sf-menu li{
     background:none !important;
@@ -418,6 +425,32 @@ ul#menu,
 }
 .menu .sf-menu ul li a{
     color:black;
+}
+.scrolled {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: -15px;
+    background: white !important;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0 15px;
+    -webkit-transition: .3s all ease-out;
+    -o-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+}
+.scrolled .menu-item{
+    padding-bottom: 15px;
+}
+.scrolled .sub-menu .menu-item{
+    padding-bottom: 0px;
+}
+.scrolled .sf-menu a {
+    color:#767676;
+}
+.scrolled li a:hover, a:visited{
+    color: black;
 }
 .carousel-head{
     bottom: 50px !important;
@@ -455,4 +488,42 @@ ul#menu,
         top: -70px;  
         font-size: 0.875rem; 
      }
+}
+/* content css */
+/* IN THE KNOW */
+/* .image{
+    height: 400px !important;
+} */
+.cell{
+    padding-left: 40px;
+    float: right;
+    padding-right: 50px;
+}
+.text-wrap .title-h2{
+    font-weight: 700;
+    line-height :1.5em;
+    font-size:1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: opensans-semibold,Arial;
+}
+.cell .text-wrap{
+    z-index: 1000;
+}
+.cell .text-wrap p {
+    text-align: left;
+    line-height: 2em;
+    color: #3f3737;
+}
+.cell .transparent-black-btn {
+    color: #000032;
+    background: rgba(0,0,0,0);
+    border: 1px solid #000032;
+}
+.cell .transparent-black-btn:hover{
+    background-color: #000232;
+    color: white;
+}
+.block img{
+    width: 160px !important;
 }

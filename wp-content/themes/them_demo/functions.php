@@ -217,10 +217,13 @@ function theme_js(){
     wp_register_script('superfish-script',get_template_directory_uri() . "/superfish.js",array('jquery' ));
     wp_enqueue_script('superfish-script');
     // custom
-    wp_register_script('custom-script',get_template_directory_uri() . "/custom.js",array('jquery' ));
+    wp_register_script('custom-script',get_template_directory_uri() . "/custom.js");
     wp_enqueue_script('custom-script');
     // js bootstrap
     wp_register_script('bootstrap-script',get_template_directory_uri() . "/js/bootstrap.min.js");
     wp_enqueue_script('bootstrap-script');
+    ///
+    wp_register_script('common-script',get_template_directory_uri() . "/common.js");
+    wp_enqueue_script('common-script');
 }
 add_action('wp_enqueue_scripts','theme_js');
