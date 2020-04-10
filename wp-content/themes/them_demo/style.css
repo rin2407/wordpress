@@ -70,7 +70,7 @@ table ,table tr,table td{
 }
 .main-content{
     width:620px;
-    float: left;
+    /* float: left; */
     margin-right:10px;
 }
 #sidebar{
@@ -475,6 +475,55 @@ ul#menu,
 .search-sec{
     padding: 2rem;
 }
+
+/* content css */
+/* IN THE KNOW */
+/* .image{
+    height: 400px !important;
+} */
+
+.text-wrap .title-h2{
+    font-weight: 700;
+    line-height :1.5em;
+    font-size:1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: opensans-semibold,Arial;
+}
+
+.text-wrap p{
+    text-align: left;
+    line-height: 2em;
+    color: #3f3737;
+}
+.slick-prev{
+    z-index: 100000000000000;
+    margin-left:25%;
+}
+.slick-next{
+    z-index: 100000000000000;
+    margin-right: 50%;  
+}
+.slick-prev, .slick-next {
+    width:40px !important;
+    height: 40px !important;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 30px !important;
+}
+
+.slider-multiple .slick-prev{
+    display: none !important;
+}
+.slider-multiple .slick-next{
+    display: none !important;
+}
+.slider-multiple img{
+    height:150px !important;
+}
+.slider-multiple .text-wrap .entry-title a{
+    font-size: 20px !important;
+}
 @media (min-width: 992px){
     .search-sec{
         position: relative;
@@ -488,42 +537,22 @@ ul#menu,
         top: -70px;  
         font-size: 0.875rem; 
      }
+     .slick-prev{
+        z-index: 100000000000000;
+        margin-left:10%;
+    }
+
 }
-/* content css */
-/* IN THE KNOW */
-/* .image{
-    height: 400px !important;
+/* @media (min-width:800px){
+     .slick-prev{
+        z-index: 100000000000000;
+        margin-left:10%;
+    }
+}
+@media (max-width:992px){
+    .slick-prev{
+       z-index: 100000000000000;
+       margin-left:25%;
+   }
+
 } */
-.cell{
-    padding-left: 40px;
-    float: right;
-    padding-right: 50px;
-}
-.text-wrap .title-h2{
-    font-weight: 700;
-    line-height :1.5em;
-    font-size:1.5em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: opensans-semibold,Arial;
-}
-.cell .text-wrap{
-    z-index: 1000;
-}
-.cell .text-wrap p {
-    text-align: left;
-    line-height: 2em;
-    color: #3f3737;
-}
-.cell .transparent-black-btn {
-    color: #000032;
-    background: rgba(0,0,0,0);
-    border: 1px solid #000032;
-}
-.cell .transparent-black-btn:hover{
-    background-color: #000232;
-    color: white;
-}
-.block img{
-    width: 160px !important;
-}
