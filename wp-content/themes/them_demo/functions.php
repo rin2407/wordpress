@@ -135,6 +135,18 @@ if(!function_exists('theme_entry_header')){
 <?php
     }
 }
+/* title header */
+if(!function_exists('title_header')){
+    function title_header(){
+        ?>
+<?php if( is_single() ) : ?>
+<?php the_title(); ?>
+<?php else : ?>
+<?php the_title(); ?>
+<?php endif; ?>
+<?php
+    }
+}
 /* theme_entry_meta */
 if(!function_exists('theme_entry_meta')){
     function theme_entry_meta(){
@@ -209,8 +221,14 @@ function css_style(){
     wp_enqueue_style('bootstrap-style');
     wp_register_style('bootstrap-theme',get_template_directory_uri() . "/css/bootstrap.css",'all');
     wp_enqueue_style('bootstrap-theme');
-
-    
+    //slick
+    wp_register_style('slick-theme',get_template_directory_uri() . "/css/slick-theme.css",'all');
+    wp_enqueue_style('slick-theme');
+    wp_register_style('slick-style',get_template_directory_uri() . "/css/slick.css",'all');
+    wp_enqueue_style('slick-style');
+    // 
+    wp_register_style('magnific-theme',get_template_directory_uri() . "/css/magnific-popup.css",'all');
+    wp_enqueue_style('magnific-theme');
 }
 add_action('wp_enqueue_scripts','css_style');
 function theme_js(){
@@ -222,7 +240,13 @@ function theme_js(){
     // js bootstrap
     wp_register_script('bootstrap-script',get_template_directory_uri() . "/js/bootstrap.min.js");
     wp_enqueue_script('bootstrap-script');
+    // slick js
+    wp_register_script('slick-script',get_template_directory_uri() . "/js/slick.js");
+    wp_enqueue_script('slick-script');
     ///
+    wp_register_script('magnific-script',get_template_directory_uri() . "/js/jquery.magnific-popup.js");
+    wp_enqueue_script('magnific-script');
+    //
     wp_register_script('common-script',get_template_directory_uri() . "/common.js");
     wp_enqueue_script('common-script');
 }
