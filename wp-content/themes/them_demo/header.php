@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' );?>">
     <link rel="profile" href="http:://gmgp.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' );?>" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <?php wp_head(); ?>
 </head>
 

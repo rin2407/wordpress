@@ -3,7 +3,7 @@
     <div class="main-content">
         <?php 
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php get_template_part('content', get_post_format());?>
+        <?php get_template_part('content')?>
         <?php get_template_part('author-bio'); ?>
         <?php comments_template(); ?>
         <?php endwhile; ?>
@@ -11,7 +11,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php get_template_part('content','none') ?>
         <?php endif; ?>
     </div>
-    <div id="sidenar">
+    <div id="sidebar">
     <?php get_sidebar(); ?>
     </div>
 </div>
