@@ -51,15 +51,30 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     <div class="more">
         <h2 class="text-center">MORE ROSEWOOD</h2>
         <h4 class="text-center">ENJOY A COMPLIMENTARY NIGHT</h4>
-        <p>Enjoy a complimentary night on your stay with More Rosewood. Escape to the warmth of the tropics, the serenity of the countryside or the excitement of a capital city and experience an unforgettable destination with more time to roam.</p>
-        <a href="#" class="button border dynamic-width" aria-label="View Properties with this offer - enjoy a complimentary night">View Properties with this offer</a>
+        <p>Enjoy a complimentary night on your stay with More Rosewood. Escape to the warmth of the tropics, the
+            serenity of the countryside or the excitement of a capital city and experience an unforgettable destination
+            with more time to roam.</p>
+        <a href="#" class="button border dynamic-width"
+            aria-label="View Properties with this offer - enjoy a complimentary night">View Properties with this
+            offer</a>
     </div>
 </div>
 <div class="container">
-    <h2 class="text-center">FEATURED DESTINATIONS</h2>
+    <div class="slider-2">
+        <h2 class="text-center">FEATURED DESTINATIONS</h2>
+        <div class="owl-carousel owl-theme owl2">
+        <?php
+if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <?php get_template_part('content','theme_thumbnail_owl')?>
+        <?php endwhile; ?>
+        <?php else : ?>
+        <?php get_template_part('content','none') ?>
+        <?php endif; ?>
+        </div>
+    </div>
 </div>
 <div class="container">
-    <h2 class="text-center">THROUGH YOUR EYES</h2>
+    <h2 class="text-center through">THROUGH YOUR EYES</h2>
     <p class="text-center">Explore Rosewood through the eyes of our guests.</p>
     <div class="slider-3 popup-gallery">
         <?php

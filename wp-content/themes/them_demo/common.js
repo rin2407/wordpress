@@ -46,6 +46,7 @@ jQuery(document).ready(function(){
         jQuery(".slider .slick-active .title-h2 a").html(data_header);
         jQuery(".slider .slick-active .title-h2 a").attr('href',a_href);
         jQuery(".slider .slick-active .text-wrap p").html(data_content);
+
     });    
 });
 // magnific
@@ -60,7 +61,7 @@ jQuery(document).ready(function() {
 		fixedContentPos: false
 	});
 });
-// 
+// popup
 jQuery(document).ready(function() {
 	jQuery('.popup-gallery').magnificPopup({
 		delegate: 'a',
@@ -80,3 +81,23 @@ jQuery(document).ready(function() {
 		}
 	});
 });
+///
+jQuery(document).ready(function(){
+  jQuery('.owl2 ').owlCarousel({
+    stagePadding: 50,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+  })
+})
