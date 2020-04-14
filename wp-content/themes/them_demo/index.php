@@ -29,7 +29,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     </div>
 </div>
 <div class="container">
-    <div class="video bounceInUp animated">
+    <div class="video">
         <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
@@ -65,7 +65,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <div class="owl-carousel owl-theme owl2">
         <?php
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php get_template_part('content','theme_thumbnail_owl')?>
+        <?php theme_thumbnail_owl('large') ?>
         <?php endwhile; ?>
         <?php else : ?>
         <?php get_template_part('content','none') ?>
@@ -79,7 +79,11 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     <div class="slider-3 popup-gallery">
         <?php
     if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php get_template_part('content','slider3')?>
+        <div class="items">
+    <div class="row">
+        <?php theme_thumbnail_a('large') ?>
+    </div>
+</div>
         <?php endwhile; ?>
         <?php else : ?>
         <?php get_template_part('content','none') ?>

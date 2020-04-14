@@ -11,8 +11,5 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php get_template_part('content','none') ?>
         <?php endif; ?>
     </div>
-    <div id="sidenar">
-    <?php get_sidebar(); ?>
-    </div>
 </div>
 <?php get_footer();?>

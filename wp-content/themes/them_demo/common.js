@@ -81,6 +81,7 @@ jQuery(document).ready(function() {
 		}
 	});
 });
+//video
 ///
 jQuery(document).ready(function(){
   jQuery('.owl2 ').owlCarousel({
