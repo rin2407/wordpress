@@ -401,6 +401,7 @@ ul#menu,
     right: 0;
     left: 0;
     top: -15px;
+    height:120px;
     background: white !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -450,6 +451,7 @@ ul#menu,
 /* IN THE KNOW */
 .main-image .post-thumbnail img{
     height: 400px !important;
+    width:100%;
 }
 
 .text-wrap .title-h2{
@@ -559,12 +561,7 @@ ul#menu,
     height: 500px;
 }
 .more{
-    background-color:white;
-    margin-left:20%;
     margin-top: -70px;
-    width: 700px;
-    height: 300px;
-
 }
 .more h2{
     color: #000032;
@@ -602,13 +599,18 @@ ul#menu,
 .slider-3 .slick-prev{
     margin-left: 6%;
     z-index: 1000;
+    top:45%;
     border: none !important;
 }
 .slider-3 .slick-next{
     margin-right: 10%;
     z-index: 1000;
+    top:45%;
     border: none !important;
 
+}
+.slider-3 img{
+    height:160px !important;
 }
 .mfp-iframe-holder .mfp-close {
     color: #FFF;

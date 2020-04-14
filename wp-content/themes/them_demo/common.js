@@ -35,9 +35,6 @@ jQuery(document).ready(function(){
   // change image
   jQuery(document).ready(function(){
     jQuery(".change-image img").click(function(){
-        // Change src attribute of image
-        // var title=jQuery(this).attr('data-header');
-        // alert(title);
         var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
         var data_content= jQuery(this).parent().parent().parent().next().children().attr('data-content');
         var a_href=jQuery(this).parent().parent().parent().next().children().children().children().attr('href');
