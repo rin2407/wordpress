@@ -24,6 +24,14 @@ window.onscroll = function() {
         slidesToScroll: 3
       });
   });
+//   slick slider-3
+jQuery(document).ready(function(){
+    jQuery('.slider-3').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll:1
+      });
+  });
   // change image
   jQuery(document).ready(function(){
     jQuery(".change-image img").click(function(){
@@ -31,16 +39,17 @@ window.onscroll = function() {
         // var title=jQuery(this).attr('data-header');
         // alert(title);
         var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
-       var data_content= jQuery(this).parent().parent().parent().next().children().attr('data-content');
-       var a_href= jQuery(this).parent().parent().parent().next().children().children().children().attr('href');
+        var data_content= jQuery(this).parent().parent().parent().next().children().attr('data-content');
+        var a_href=jQuery(this).parent().parent().parent().next().children().children().children().attr('href');
         var change=jQuery(this).attr('src');
         jQuery(".slider .slick-active img").attr('srcset',change);
         jQuery(".slider .slick-active .title-h2 a").html(data_header);
         jQuery(".slider .slick-active .title-h2 a").attr('href',a_href);
         jQuery(".slider .slick-active .text-wrap p").html(data_content);
+
     });    
 });
-// video
+// magnific
 jQuery(document).ready(function() {
 	jQuery('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 		disableOn: 700,
@@ -52,7 +61,43 @@ jQuery(document).ready(function() {
 		fixedContentPos: false
 	});
 });
-function changeImage(id){
-    let imagePath= document.getElementById(id).getAttribute("src");
-    document.getElementById('mainImage').setAttribute('src',imagePath);
-}
+// popup
+jQuery(document).ready(function() {
+	jQuery('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+			}
+		}
+	});
+});
+///
+jQuery(document).ready(function(){
+  jQuery('.owl2 ').owlCarousel({
+    stagePadding: 50,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+  })
+})

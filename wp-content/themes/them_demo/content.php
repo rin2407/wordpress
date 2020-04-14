@@ -7,7 +7,7 @@
             <div class="col-md-4">
                 <div class="text-wrap">
                     <div class="title-h2"> <?php theme_entry_header(); ?> </div>
-                    <p> <?php theme_entry_content(); ?></p>
+                     <?php theme_entry_content(); ?>
                 </div>
             </div>
         </div>
