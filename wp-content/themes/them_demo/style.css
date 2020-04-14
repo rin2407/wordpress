@@ -371,7 +371,7 @@ ul#menu,
  }
 /*================menu============*/
 .menu{
-    z-index: 100000;
+    z-index: 1000;
     top: 30px;
     position: absolute;
     width:100%;
@@ -469,10 +469,12 @@ ul#menu,
 .slider .slick-prev{
     z-index: 1000;
     margin-left:8%;
+    border: none !important;
 }
-.slick-next {
+.slider .slick-next {
     z-index: 1000;
     margin-right: 50%;  
+    border: none !important;
 }
 .slick-prev, .slick-next {
     width: 50px !important;
@@ -491,6 +493,11 @@ ul#menu,
 }
 .slider-multiple img{
     height:150px !important;
+    cursor: pointer;
+}
+.slick-slide img {
+    cursor: pointer;
+    display: block;
 }
 .slider-multiple .text-wrap .entry-title a{
     font-size: 20px !important;
@@ -595,10 +602,12 @@ ul#menu,
 .slider-3 .slick-prev{
     margin-left: 6%;
     z-index: 1000;
+    border: none !important;
 }
 .slider-3 .slick-next{
     margin-right: 10%;
     z-index: 1000;
+    border: none !important;
 
 }
 .mfp-iframe-holder .mfp-close {
@@ -671,16 +680,77 @@ ul#menu,
 }
 .slider-2 .owl-nav {
     position: relative;
-    margin-top:-400px;
+    margin-top:-335px;
 }
-.slider-2 .owl-nav span{
-    font-size:80px;
+.slider-2 .owl-nav span {
+    font-size:130px;
+    color: white;
 }
-.slider-2 .owl-nav .owl-next{
+.slider-2 .owl-nav .owl-next {
     float: right;
 }
 .through{
-    margin-top:300px;
+    margin-top:150px;
+}
+.slider-2 .owl-carousel .owl-item img {
+    height: 450px;
+    display: block;
+    width: 100%;
+}
+.slider-2 .owl-nav button.owl-prev{
+    border: none !important;
+}
+.slider-2 .owl-nav button.owl-next{
+    border: none !important;
+}
+/* footer */
+.share{
+    background-color: #696969;
+}
+.share p{
+    text-transform: uppercase;
+    margin-top: 7px;
+    font-size: 1em;
+    font-weight: 700;
+    margin-left:10%;
+}
+.icon{
+    margin-top:5px;
+    margin-left: 20px;
+}
+.icon a{
+    padding: 0 10px;
+    font-size: 110%;
+}
+.links{
+    margin-top:-20px !important;
+}
+.links-content{
+    position: absolute;
+}
+.img-wraper{
+    height: 100px;
+    width: 200px;
+    background-image: url("more.png");
+}
+.inner-content-wraper{
+    margin-left:20px;
+}
+.inner-content-wrapper .button-wrapper a.submit-area>div {
+    height: 41px;
+    width: 50px;
+    background: #000032;
+}
+.sr-only {
+    position: absolute!important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    font-size: 16px;
 }
 /* @media (min-width:800px){
      .slick-prev{

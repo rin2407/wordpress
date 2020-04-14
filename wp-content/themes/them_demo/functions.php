@@ -127,7 +127,7 @@ if(!function_exists('theme_thumbnail')){
 if(!function_exists('theme_thumbnail_owl')){
     function theme_thumbnail_owl($size){
         if(is_single() || is_home() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
-<figure class="item"> <?php the_post_thumbnail($size) ?></figure>
+<figure class="item"><?php the_post_thumbnail($size) ?></figure>
 <?php endif; ?>
 <?php
 
