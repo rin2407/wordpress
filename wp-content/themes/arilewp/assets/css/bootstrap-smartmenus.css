@@ -271,13 +271,13 @@ a.bg-light:focus, a.bg-light:hover {
 		margin-top: 2.355rem;
 	}
 	.navbar .nav .dropdown-menu {
-        top: 65px !important;
+        top: 40px !important;
     }
     .navbar.header-fixed-top .nav .dropdown-menu {
-        top: 53px !important;
+        top: 35px !important;
     }
 	.navbar .nav .dropdown-menu { 
-		background-color: #01012f; 
+		background-color: white; 
 		box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 12px 0 rgba(0, 0, 0, 0.12); 
 	}
 	.navbar .nav .dropdown-item {
@@ -292,7 +292,10 @@ a.bg-light:focus, a.bg-light:hover {
     }
     .navbar.header-fixed-top .nav .dropdown-menu ul.dropdown-menu {
         top: auto !important;
-    }
+	}
+	.navbar .nav .dropdown-menu li a{
+		color:black;
+	}
 }
 
 

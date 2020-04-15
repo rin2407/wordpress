@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
     jQuery('.slider').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
       });
   });
   // slick multiple
@@ -21,7 +21,23 @@ jQuery(document).ready(function(){
     jQuery('.slider-multiple').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       });
   });
     // change image
@@ -55,9 +71,66 @@ jQuery(document).ready(function(){
     jQuery('.slider-3').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll:1
+        slidesToScroll:1,
+        autoplay: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       });
   });
+  //
+  jQuery(document).ready(function(){
+    jQuery('.slider-feature-1').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-feature-2'
+      });
+      jQuery('.slider-feature-2').slick({
+          infinite:true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        
+      });
+  });
+jQuery(document).ready(function(){
+    jQuery('.slider-feature').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+      });
+});
 // popup
 jQuery(document).ready(function() {
 	jQuery('.popup-gallery').magnificPopup({
@@ -73,8 +146,18 @@ jQuery(document).ready(function() {
 		image: {
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 			titleSrc: function(item) {
-				return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+				return item.el.attr('title');
 			}
 		}
 	});
 });
+jQuery(document).ready(function(){
+    jQuery('.slider-3 a,img').hover(function(){
+        jQuery(this).parent().next().css("opacity","100%");
+    })
+})
+jQuery(document).ready(function(){
+    jQuery('.slider-3 a').mouseleave(function(){
+        jQuery(this).parent().next().css("opacity","0%");
+    })
+})

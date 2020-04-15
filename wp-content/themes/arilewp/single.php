@@ -38,7 +38,8 @@ if($arilewp_single_blog_container_size == 'container-full'){$container = '9';}el
 				the_post();
 
 				get_template_part( 'template-parts/content-single', get_post_type() );
-
+				?>
+				<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();

@@ -83,6 +83,29 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="feature mt-4">
+        <h1 class="text-center">FEATURED DESTINATIONS</h1>
+    </div>
+    <div class="slider-feature-1">
+    <?php 
+if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <?php the_title(); ?>
+        <?php endwhile; ?>
+        <?php else : ?>
+        <?php get_template_part('content','none') ?>
+        <?php endif; ?>
+    </div>
+    <div class="slider-feature-2">
+    <?php 
+if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <?php get_template_part('template-parts/content','feature')?>
+        <?php endwhile; ?>
+        <?php else : ?>
+        <?php get_template_part('content','none') ?>
+        <?php endif; ?>
+    </div>
+</div>
 <!-- end -->
 <div class="container">
     <h2 class="text-center through">THROUGH YOUR EYES</h2>
@@ -91,9 +114,10 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php
     if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <div class="items">
-            <div class="row">
+            <div class="row image-a">
                 <?php theme_thumbnail_a('large') ?>
             </div>
+            <div class="title"><?php the_title(); ?></div>
         </div>
         <?php endwhile; ?>
         <?php else : ?>

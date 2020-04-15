@@ -173,7 +173,7 @@ if(!function_exists('theme_thumbnail_owl')){
 if(!function_exists('theme_thumbnail_a')){
     function theme_thumbnail_a($size){
         if(!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
-        <?php $imageUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );
+        <?php $imageUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'large') );
  ?>
 <a href="<?php echo $imageUrl ?>" title='<?php theme_entry_content(); ?>'><?php the_post_thumbnail($size) ?></a>
 <?php endif; ?>
@@ -212,7 +212,7 @@ if(!function_exists('theme_entry_content')){
     }
 }
 function read_more(){
-    return '<a class="read-more" href="'. get_permalink( get_the_ID()) .'">'. __('...[Read more]'. '</a>');
+    return '<a class="read-more btn  btn-outline-secondary " href="'. get_permalink( get_the_ID()) .'">'. __(' Read more'. '</a>');
 }
 add_filter('excerpt_more','read_more');
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');
@@ -282,9 +282,6 @@ function css_style(){
     // magnifict
     wp_register_style('magnifict-theme',get_template_directory_uri() . "/css/magnific-popup.css",'all');
     wp_enqueue_style('magnifict-theme');
-    //
-    wp_register_style('awesome-theme',get_template_directory_uri() . "/css/font-awesome.min.css",'all');
-    wp_enqueue_style('awesome-theme');
     // aminate
     wp_register_style('aminate-theme',get_template_directory_uri() . "/css/aminate.css",'all');
     wp_enqueue_style('aminate-theme');

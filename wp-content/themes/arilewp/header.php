@@ -30,7 +30,7 @@
         <?php get_template_part('template-parts/site','navbar'); ?>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators carousel-head">
+        <ol class="carousel-indicators carousel-head carousel-ol">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>

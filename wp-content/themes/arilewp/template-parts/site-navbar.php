@@ -7,7 +7,7 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
     <div class="row mt-4">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-		<a href="#" class="btn btn btn-light btn-sm btn-lg check float-right">CHECK RATES</a>
+		<a href="#" class="btn btn-light btn-small check float-right">CHECK RATES</a>
             <ul id="menu" class="mr-4 float-right">
                 <li><a href="#">ENGLISH</a>
                     <ul id="sub">
