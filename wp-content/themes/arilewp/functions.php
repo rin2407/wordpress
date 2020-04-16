@@ -163,7 +163,20 @@ if(!function_exists('theme_entry_header')){
 if(!function_exists('theme_thumbnail_owl')){
     function theme_thumbnail_owl($size){
         if(is_single() || is_home() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
-<figure class="item"><?php the_post_thumbnail($size) ?></figure>
+<figure class="item"><?php the_post_thumbnail($size) ?>
+<div class="feature-content">
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<div class="title-content">
+		<span><?php the_title(); ?></span>
+		</div>
+		<?php theme_entry_content() ?>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+</div>
+</figure>
 <?php endif; ?>
 <?php
 
@@ -308,7 +321,11 @@ function theme_js(){
     wp_enqueue_script('magnifict-script');
     // carousel
     wp_register_script('carousel-script',get_template_directory_uri() . "/js/owl.carousel.min.js");
-    wp_enqueue_script('carousel-script');
+	wp_enqueue_script('carousel-script');
+	// wow
+	wp_register_script('wow-script',get_template_directory_uri() . "/js/wow.min.js");
+	wp_enqueue_script('wow-script');
+
 }
 add_action('wp_enqueue_scripts','theme_js');
 

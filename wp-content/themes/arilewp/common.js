@@ -93,44 +93,26 @@ jQuery(document).ready(function(){
   });
   //
   jQuery(document).ready(function(){
-    jQuery('.slider-feature-1').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-feature-2'
-      });
-      jQuery('.slider-feature-2').slick({
-          infinite:true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-        
-      });
-  });
-jQuery(document).ready(function(){
-    jQuery('.slider-feature').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-      });
-});
+    jQuery('.owl2 ').owlCarousel({
+      stagePadding: 50,
+      loop:true,
+      margin:10,
+      nav:true,
+      Dots:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+    })
+  })
+  //
 // popup
 jQuery(document).ready(function() {
 	jQuery('.popup-gallery').magnificPopup({
@@ -152,12 +134,18 @@ jQuery(document).ready(function() {
 	});
 });
 jQuery(document).ready(function(){
-    jQuery('.slider-3 a,img').hover(function(){
+    jQuery('.slider-3 a').hover(function(){
+      jQuery(this).children().css("opacity","60%");
         jQuery(this).parent().next().css("opacity","100%");
     })
 })
 jQuery(document).ready(function(){
     jQuery('.slider-3 a').mouseleave(function(){
+      jQuery(this).children().css("opacity","100%");
         jQuery(this).parent().next().css("opacity","0%");
     })
 })
+// wow
+jQuery(document).ready(function() {
+  new WOW().init();
+});

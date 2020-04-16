@@ -40,8 +40,8 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
         </div>
 	</div>
 	<div class="container">
-        <div class="row">
-            <div class="col-md-4 mt-3">
+        <div class="row mt-3">
+            <div class="col-md-4">
                 <div class="title-h5">
                     <strong>ROOM RESERVATIONS</strong>
                 </div>
@@ -70,7 +70,7 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
 					?>
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
+            <div class="col-md-4">
                 <div class="contact-content">
                     <div class="upper-wraper d-flex">
                         <div class="img-wraper"></div>

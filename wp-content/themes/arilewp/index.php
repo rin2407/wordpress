@@ -16,26 +16,28 @@ get_header();
 $arilewp_general_blog_container_size = get_theme_mod('arilewp_general_blog_container_size', 'container');
 if($arilewp_general_blog_container_size == 'container-full'){$container = '9';}else{$container = '8';}
 ?>
-<div class="container">
-    <div class="row mb-2">
-        <div class="col-md-12">
-            <h1 class="text-center"> IN THE KNOW </h1>
+<div class="group-know wow fadeInUp">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-12">
+                <h2 class="text-center  title-know"> IN THE KNOW </h2>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="slider">
-        <?php 
+    <div class="know-color">
+            <div class="slider">
+                <?php 
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php get_template_part('template-parts/content')?>
-        <?php endwhile; ?>
-        <?php else : ?>
-        <?php get_template_part('content','none') ?>
-        <?php endif; ?>
+                <?php get_template_part('template-parts/content')?>
+                <?php endwhile; ?>
+                <?php else : ?>
+                <?php get_template_part('content','none') ?>
+                <?php endif; ?>
+            </div>
     </div>
 </div>
 <div class="container">
-    <div class="slider-multiple">
+    <div class="slider-multiple wow fadeInUp">
         <?php
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php get_template_part('template-parts/content-slider')?>
@@ -46,14 +48,14 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     </div>
 </div>
 <div class="container">
-    <div class="video">
+    <div class="video  wow fadeInUp">
         <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
                 <div class="text">
-                    <h2>ROSEWOOD LIMITED EDITION</h2>
+                    <h2 class="wow bounceInDown">ROSEWOOD LIMITED EDITION</h2>
                 </div>
-                <div class="play mt-2">
+                <div class="play mt-2 wow fadeInDownBig">
                     <a class="popup-vimeo" href="https://www.youtube.com/watch?v=jOeEJ0EaNME">
                         <i class="fas fa-play" aria-hidden="true"> Watch Video</i></a>
                 </div>
@@ -62,67 +64,69 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="background-more">
-    </div>
-    <div class="more">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 more-6">
-                <h2 class="text-center">MORE ROSEWOOD</h2>
-                <h4 class="text-center">ENJOY A COMPLIMENTARY NIGHT</h4>
-                <p>Enjoy a complimentary night on your stay with More Rosewood. Escape to the warmth of the tropics, the
-                    serenity of the countryside or the excitement of a capital city and experience an unforgettable
-                    destination
-                    with more time to roam.</p>
-                <a href="#" class="button border dynamic-width"
-                    aria-label="View Properties with this offer - enjoy a complimentary night">View Properties with this
-                    offer</a>
+<div class="more-color">
+    <div class="container">
+        <div class="background-more  wow fadeInUp">
+        </div>
+        <div class="more">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 more-6  wow fadeInUp">
+                    <h2 class="text-center">MORE ROSEWOOD</h2>
+                    <h4 class="text-center">ENJOY A COMPLIMENTARY NIGHT</h4>
+                    <p>Enjoy a complimentary night on your stay with More Rosewood. Escape to the warmth of the
+                        tropics,
+                        the
+                        serenity of the countryside or the excitement of a capital city and experience an
+                        unforgettable
+                        destination
+                        with more time to roam.</p>
+                    <a href="#" class="button border dynamic-width"
+                        aria-label="View Properties with this offer - enjoy a complimentary night">View Properties
+                        with
+                        this
+                        offer</a>
+                </div>
+                <div class="col-md-3"></div>
             </div>
-            <div class="col-md-3"></div>
         </div>
     </div>
 </div>
+<div class="feature-des wow fadeInUp">
 <div class="container">
-    <div class="feature mt-4">
-        <h1 class="text-center">FEATURED DESTINATIONS</h1>
-    </div>
-    <div class="slider-feature-1">
-    <?php 
+    <div class="slider-2">
+        <h2 class="text-center title-feature">FEATURED DESTINATIONS</h2>
+        <div class="owl-carousel owl-theme owl2">
+        <?php
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php the_title(); ?>
+        <?php theme_thumbnail_owl('large') ?>
         <?php endwhile; ?>
         <?php else : ?>
-        <?php get_template_part('content','none') ?>
+        <?php get_template_part('template-past/content','none') ?>
         <?php endif; ?>
+        </div>
     </div>
-    <div class="slider-feature-2">
-    <?php 
-if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php get_template_part('template-parts/content','feature')?>
-        <?php endwhile; ?>
-        <?php else : ?>
-        <?php get_template_part('content','none') ?>
-        <?php endif; ?>
-    </div>
+</div>
 </div>
 <!-- end -->
-<div class="container">
-    <h2 class="text-center through">THROUGH YOUR EYES</h2>
-    <p class="text-center">Explore Rosewood through the eyes of our guests.</p>
-    <div class="slider-3 popup-gallery">
-        <?php
+<div class="through-eyes  wow fadeInUp">
+    <div class="container">
+        <h2 class="text-center through">THROUGH YOUR EYES</h2>
+        <p class="text-center">Explore Rosewood through the eyes of our guests.</p>
+        <div class="slider-3 popup-gallery">
+            <?php
     if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <div class="items">
-            <div class="row image-a">
-                <?php theme_thumbnail_a('large') ?>
+            <div class="items">
+                <div class="row image-a">
+                    <?php theme_thumbnail_a('large') ?>
+                </div>
+                <div class="title"><span><?php the_title(); ?></span></div>
             </div>
-            <div class="title"><?php the_title(); ?></div>
+            <?php endwhile; ?>
+            <?php else : ?>
+            <?php get_template_part('content','none') ?>
+            <?php endif; ?>
         </div>
-        <?php endwhile; ?>
-        <?php else : ?>
-        <?php get_template_part('content','none') ?>
-        <?php endif; ?>
     </div>
 </div>
 <?php
