@@ -65,7 +65,7 @@
                             <P>1Room • 1Adult • 0Child</P>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
-                            <a href="#" class="btn btn-primary btn-lg mt-2 check-rate">CHECK RATE</a>
+                            <a href="#" class="btn btn-primary btn-lg mt-2 check-rate">CHECK RATES</a>
                         </div>
                     </div>
                 </div>

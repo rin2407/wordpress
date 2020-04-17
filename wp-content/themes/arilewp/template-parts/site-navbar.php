@@ -4,7 +4,7 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
 ?>
 <!-- Theme Menubar -->
 <div class="container">
-    <div class="row mt-4">
+    <div class="row mt-4 header-start">
         <div class="col-md-8"></div>
         <div class="col-md-4">
 		<a href="#" class="btn btn-light btn-small check float-right">CHECK RATES</a>
@@ -29,7 +29,7 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
 						wp_nav_menu( array(
 							 'theme_location'  => 'primary',
 							 'container'       => 'div',
-							 'container_class' => 'collapse navbar-collapse',
+							 'container_class' => 'collapse navbar-collapse nav-768',
 							 'container_id' => 'navbarNavDropdown',
 							 'menu_class'      => 'nav navbar-nav',
 							 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
