@@ -5,9 +5,13 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
 <!-- Theme Menubar -->
 <div class="container">
     <div class="row mt-4 header-start">
-        <div class="col-md-8"></div>
-        <div class="col-md-4">
-		<a href="#" class="btn btn-light btn-small check float-right">CHECK RATES</a>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 logo-hotel float-right">
+            <img src="https://fareast.net.au/wp-content/uploads/2018/02/Rosewood-Hotel-Logo-v2.png" class="l-hotel"
+                alt="">
+        </div>
+        <div class="col-md-4 language">
+            <a href="#" class="btn btn-light btn-small check float-right">CHECK RATES</a>
             <ul id="menu" class="mr-4 float-right">
                 <li><a href="#">ENGLISH</a>
                     <ul id="sub">
@@ -37,8 +41,9 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
 						) );
 					?>
             <div class="align-self-center">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler btn-nav" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>

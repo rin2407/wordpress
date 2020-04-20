@@ -135,14 +135,12 @@ jQuery(document).ready(function() {
 });
 jQuery(document).ready(function(){
     jQuery('.slider-3 a').hover(function(){
-      jQuery(this).children().css("opacity","60%");
+      jQuery(this).children().css("opacity","80%");
         jQuery(this).parent().next().css("opacity","100%");
-    })
-})
-jQuery(document).ready(function(){
-    jQuery('.slider-3 a').mouseleave(function(){
+    },
+    function(){
       jQuery(this).children().css("opacity","100%");
-        jQuery(this).parent().next().css("opacity","0%");
+      jQuery(this).parent().next().css("opacity","0%");
     })
 })
 // wow
