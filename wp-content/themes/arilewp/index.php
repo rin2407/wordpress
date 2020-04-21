@@ -25,15 +25,15 @@ if($arilewp_general_blog_container_size == 'container-full'){$container = '9';}e
         </div>
     </div>
     <div class="know-color">
-            <div class="slider">
-                <?php 
+        <div class="slider">
+            <?php 
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-                <?php get_template_part('template-parts/content')?>
-                <?php endwhile; ?>
-                <?php else : ?>
-                <?php get_template_part('content','none') ?>
-                <?php endif; ?>
-            </div>
+            <?php get_template_part('template-parts/content')?>
+            <?php endwhile; ?>
+            <?php else : ?>
+            <?php get_template_part('content','none') ?>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -93,20 +93,20 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     </div>
 </div>
 <div class="feature-des wow fadeInUp">
-<div class="container">
-    <div class="slider-2">
-        <h2 class="text-center title-feature">FEATURED DESTINATIONS</h2>
-        <div class="owl-carousel owl-theme owl2">
-        <?php
+    <div class="container">
+        <div class="slider-2">
+            <h2 class="text-center title-feature">FEATURED DESTINATIONS</h2>
+            <div class="owl-carousel owl-theme owl2">
+                <?php
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <?php theme_thumbnail_owl('large') ?>
-        <?php endwhile; ?>
-        <?php else : ?>
-        <?php get_template_part('template-past/content','none') ?>
-        <?php endif; ?>
+                <?php theme_thumbnail_owl('large') ?>
+                <?php endwhile; ?>
+                <?php else : ?>
+                <?php get_template_part('template-past/content','none') ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
 </div>
 <!-- end -->
 <div class="through-eyes  wow fadeInUp">
@@ -128,6 +128,19 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
             <?php endif; ?>
         </div>
     </div>
+</div>
+<div class="container">
+<h2 class="text-center more-rosewood wow fadeInUp">MORE FROM ROSEWOOD</h2>
+    <div class="row mt-4 mb-4">
+        <?php
+    if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <?php get_template_part('template-parts/content-more') ?>
+        <?php endwhile; ?>
+        </div>
+        <?php pagination_tdc(); ?>
+        <?php else : ?>
+        <?php get_template_part('content','none') ?>
+        <?php endif; ?>
 </div>
 <?php
 

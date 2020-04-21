@@ -16,6 +16,20 @@ jQuery(document).ready(function(){
         slidesToScroll: 1,
       });
   });
+jQuery(document).ready(function(){
+  jQuery('.main-image').hover(function(){
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().prev().show();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().next().show();
+  },function(){
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().prev().hide();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().next().hide();
+  })
+  jQuery('.slider .slick-arrow').hover(function(){
+    jQuery(this).show();
+  },function(){
+    jQuery(this).hide();
+  })
+})
   // slick multiple
   jQuery(document).ready(function(){
     jQuery('.slider-multiple').slick({
@@ -133,6 +147,20 @@ jQuery(document).ready(function() {
 		}
 	});
 });
+jQuery(document).ready(function() {
+  jQuery('.product-grid6').hover(function(){
+    jQuery(this).children().next().children().children().next().css({"color": "white"});
+    jQuery(this).children().next().children().children().next().css({"display": "block"});
+    jQuery(this).children().next().css({"background-color": "#000032", "color": "white"});
+    jQuery(this).css({"background-color":"#000032"});
+
+  },function(){
+    jQuery(this).children().next().css({"background-color": "white", "color": "black"});
+    jQuery(this).children().next().children().children().next().css({"color": "#000032"});
+    jQuery(this).children().next().children().children().next().css({"display": "none"});
+    jQuery(this).css({"background-color":"white"});
+  })
+})
 jQuery(document).ready(function(){
     jQuery('.slider-3 a').hover(function(){
       jQuery(this).children().css("opacity","80%");

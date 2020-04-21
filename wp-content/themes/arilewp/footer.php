@@ -90,7 +90,7 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
                                         class="submit-area gtm-footer" aria-label="Submit Your Email"
                                         href="/en/email-sign-up">
                                     </a>
-                                    <button class="btn btn-outline-info btn-sm submit-mail"> Submit</button>
+                                    <button class="btn btn-outline-secondary btn-sm submit-mail"> Submit</button>
                                 </div>
                         </div>
                     </div>
