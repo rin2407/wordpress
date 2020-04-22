@@ -2995,6 +2995,19 @@ ul#menu,
 	cursor: pointer;
 	width:100%;
 }
+.change-image img{
+	opacity: 0.5;
+}
+.image-active img{
+	opacity: 1;
+	cursor: default;
+}
+.change-image img:hover{
+	opacity: 1;
+}
+.r-image{
+	border:2px solid white;
+}
 .slider-multiple .entry-title a:hover{
 	color: #000032;
 	}
@@ -3247,75 +3260,31 @@ color: #000032;
     font-family: opensans-semibold,Arial;
 }
 /* footer */
-.share p{
-    text-transform: uppercase;
-    margin-top: 3px;
-    font-size: 1em;
+.contact-us{
+	text-transform: uppercase;
+	font-size: 1.25em;
     font-weight: 700;
 }
-.intro p {
-	padding-bottom: 0;
-}
-.icon{
-    margin-top:5px;
-    margin-left: 20px;
-}
 .icon a{
-    padding: 0 10px;
-    font-size: 110%;
+	padding: 0 10px;
+	font-size:110%;
 }
-.links{
-    margin-top:-10px !important;
+.introductions p{
+	padding:0;
 }
-/* .links-content{
-    position: absolute;
-} */
-.img-wraper{
-    height: 100px;
-    width: 200px;
-    background-image: url("more.png");
+.introductions .collapse:not(.show) {
+    display: block;
 }
-.inner-content-wraper{
-    margin-left:20px;
-}
-.submit-mail{
-	height: 30px;
-    margin-left: -110px;
-    border: 20px;
-	border-radius: 30px;
-	margin-top:20px;
-	color: #000032;
-}
-.submit-mail:hover{
-	background-color:#000032 !important;
-	color:white;
-}
-.inner-content-wrapper .button-wrapper a.submit-area>div {
-    height: 41px;
-    width: 50px;
-    background: #000032;
-}
-.sr-only {
-    position: absolute!important;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-    font-size: 16px;
-}
-.links-content .collapse:not(.show) {
-	display: block;
-}
-.links-content .navbar-nav.sm-collapsible .sub-arrow{
+.introductions .navbar-nav.sm-collapsible .sub-arrow{
 	display:none;
 }
-.links-content .navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-    text-align: left;
+.btn-mail{
+	border-radius: 30px !important;
+	color: #000032;
+	font-size: 1.25em;
+}
+.btn-mail:hover{
+	background-color:#000032 !important;
 }
 /********************* **********************/
 .product-grid6 .product-contents p{
@@ -3372,6 +3341,19 @@ color: #000032;
 	height:500px;
 	width:100%;
 }
+@media (min-width: 1040px) {
+	.scrolled #menu-short {
+		margin-left: 20% !important;
+	}
+  }
+@media (min-width: 780px) {
+	.scrolled #menu-short {
+		margin-left: 5% ;
+	}
+	.scrolled .check{
+		margin-right: 20px;
+	}
+  }
 @media (max-width: 966px) {
 	.scrolled .check{
 	width: 20px;

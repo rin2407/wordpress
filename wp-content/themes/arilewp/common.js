@@ -57,7 +57,9 @@ jQuery(document).ready(function(){
     // change image
     jQuery(document).ready(function(){
         jQuery(".change-image img").click(function(){
-            var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
+          jQuery('.change-image').removeClass('image-active');
+          jQuery(this).parent().parent().addClass('image-active');
+          var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
             var data_content= jQuery(this).parent().parent().parent().next().children().attr('data-content');
             var a_href=jQuery(this).parent().parent().parent().next().children().children().children().attr('href');
             var change=jQuery(this).attr('src');
