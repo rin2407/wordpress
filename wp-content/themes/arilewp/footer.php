@@ -11,7 +11,7 @@
 $arilewp_footer_widgets_enabled = get_theme_mod('arilewp_footer_widgets_enabled', true);  
 $arilewp_footer_container_size = get_theme_mod('arilewp_footer_container_size', 'container-full');
 $arilewp_footer_copright_enabled = get_theme_mod('arilewp_footer_copright_enabled', true);
-$arilewp_footer_copright_text = get_theme_mod('arilewp_footer_copright_text', __('Copyright &copy; 2020 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a>', 'arilewp'));
+$arilewp_footer_copright_text = get_theme_mod('arilewp_footer_copright_text', __('Copyright &copy; 2020 | Powered by <a href="//wordpress.org/">WordPress</a> <span class="sep"> | </span> ArileWP theme by <a target="_blank" href="//themearile.com/">ThemeArile</a> |  Gongan Beian: 31010102004896', 'arilewp'));
 $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', true); 
 ?>
 <!--Footer-->
@@ -101,6 +101,13 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
             <a href="#">ENGLISH</a> |
             <a href="#">日本語</a> |
             <a href="#">中国</a>
+        </div>
+        <hr>
+        <div class="about text-center mb-2">
+            <a href="#">COOKIE POLICY</a> |
+            <a href="#">PRIVACY POLICY</a> |
+            <a href="#">ACCESSIBILITY STATEMENT</a> |
+            <a href="#">SITEMAP</a>
         </div>
         <div class="copy text-center">
             <?php echo wp_kses_post($arilewp_footer_copright_text); ?>

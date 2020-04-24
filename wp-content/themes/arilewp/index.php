@@ -88,9 +88,9 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         </div>
     </div>
 </div>
-<div class="feature-des wow fadeInUp">
+<div class="feature-des">
     <div class="container">
-        <div class="slider-2">
+        <div class="slider-2 wow fadeInUp">
             <h2 class="text-center title-feature">FEATURED DESTINATIONS</h2>
             <div class="owl-carousel owl-theme owl2">
                 <?php
@@ -108,7 +108,8 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 <div class="through-eyes  wow fadeInUp">
     <div class="container">
         <h2 class="text-center through">THROUGH YOUR EYES</h2>
-        <p class="text-center">Explore Rosewood through the eyes of our guests.</p>
+        <p class="text-center">Explore Rosewood through the eyes of our guests.<br>
+         Share your own Rosewood journey by using <a rel="noopener noreferrer" href="https://www.instagram.com/rosewoodhotels/" target="_blank">@RosewoodHotels</a>&nbsp;and&nbsp;<a rel="noopener noreferrer" href="https://www.instagram.com/explore/tags/rwjourneys/" target="_blank">#RWJourneys</a>.</p>
         <div class="slider-3 popup-gallery">
             <?php
     if( have_posts() ) : while( have_posts() ) : the_post(); ?>

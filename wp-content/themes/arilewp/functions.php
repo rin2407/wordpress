@@ -164,7 +164,7 @@ if(!function_exists('theme_thumbnail_owl')){
     function theme_thumbnail_owl($size){
         if(is_single() || is_home() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
 <figure class="item"><?php the_post_thumbnail($size) ?>
-<div class="feature-content">
+<div class="feature-content wow fadeInUp">
 <div class="row">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">
