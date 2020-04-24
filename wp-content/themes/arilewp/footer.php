@@ -37,10 +37,10 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
                     <div class="col-md-10 icon">
                         <a href=""><span><i class="fas fa-share-alt"></i></span></a>
                         <a href=""><span><i class="fas fa-sms"></i></span></a>
-                        <a href=""><span><i class="fab fa-facebook-f"></i></span></a>
-                        <a href=""><span><i class="fab fa-twitter-square"></i></span></a>
-                        <a href=""><span><i class="fab fa-pinterest"></i></span></a>
-                        <a href=""><span><i class="fab fa-instagram-square"></i></span></a>
+                        <a href="https://www.facebook.com/RosewoodHotels?ref=ts" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
+                        <a href="https://twitter.com/RosewoodHotels" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
+                        <a href="https://www.pinterest.com/rosewoodhotels/" target="_blank"><span><i class="fab fa-pinterest"></i></span></a>
+                        <a href="https://www.instagram.com/rosewoodhotels/" target="_blank"><span><i class="fab fa-instagram-square"></i></span></a>
                     </div>
                 </div>
             </div>

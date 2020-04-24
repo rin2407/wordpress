@@ -3,6 +3,9 @@
                 <div class="product-image6">
                     <?php theme_thumbnail('thumbnail') ?>
                 </div>
+                <div class="title">
+                    <?php the_title(); ?>
+                </div>
                 <div class="product-contents">
                     <?php theme_entry_content(); ?>
                 </div>

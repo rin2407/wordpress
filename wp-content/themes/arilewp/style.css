@@ -2916,7 +2916,11 @@ ul#menu,
     border: 1px solid #ccc;
 	border-radius:0;
 	z-index: 900;
+	padding: 0 10px;
 
+}
+.carousel-bottom h5{
+	padding-top:5px;
 }
 .check-rate{
     background-color: #000032 !important;
@@ -2995,6 +2999,9 @@ ul#menu,
 	cursor: pointer;
 	width:100%;
 }
+.slider-multiple .slick-current img{
+	opacity: 1;
+}
 .change-image img{
 	opacity: 0.5;
 }
@@ -3005,6 +3012,7 @@ ul#menu,
 .change-image img:hover{
 	opacity: 1;
 }
+
 .r-image{
 	border:2px solid white;
 }
@@ -3046,12 +3054,13 @@ color: #000032;
 }
 .video {
     margin-top: 60px;
-    background-image: url("background.png");
-    height: 500px;
+    background-image: url("background.jpg");
+	height: 500px;
+	Background-repeat:no-repeat;
 }
 .video .text{
     
-    margin-top: 50px;
+    margin-top: 95px;
     position: relative;
     width:50px;
     
@@ -3078,11 +3087,11 @@ color: #000032;
 }
 .background-more{
     margin-top:60px;
-    background-image: url('more.png');
+    background-image: url('more.jpg');
     height: 500px;
 }
 .more{
-    margin-top: -70px;
+    margin-top: -90px;
 }
 .more h2{
     color: #000032;
@@ -3159,6 +3168,14 @@ color: #000032;
  .slider-2 .entry-content{
 	 line-height:1.2;
  }
+ .slider-2 .owl-item{
+	 opacity: 0.7;
+	 /* margin-right: 0px !important; */
+ }
+ .slider-2 .active{
+	 opacity: 1 !important;
+	 /* margin-right:0 !important; */
+ }
 
 /* popup */
 .through-eyes{
@@ -3217,6 +3234,9 @@ color: #000032;
 }
 .mfp-content .mfp-figure img{
     height: 500px !important;
+}
+.mfp-title{
+	margin-left:20px;
 }
 .mfp-title .read-more{
 	background-color:white;
@@ -3322,7 +3342,7 @@ color: #000032;
 .product-grid6:hover .product-image6 img{transform:scale(1.1)}
 .product-grid6 .product-content{padding:12px 12px 15px;transition:all .5s ease 0s}
 .product-grid6:hover .product-content{opacity:0}
-.product-grid6 .title{font-size:20px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s}
+.product-grid6 .title{font-size:20px;font-weight:600;text-transform:uppercase !important;margin:0 0 10px;transition:all .3s ease 0s}
 .product-grid6 .title a{color:#000}
 .product-grid6 .title a:hover{color:#2e86de}
 .product-grid6 .price{font-size:18px;font-weight:600;color:#2e86de}
@@ -3340,6 +3360,14 @@ color: #000032;
 .theme-block .post-thumbnail img{ 
 	height:500px;
 	width:100%;
+}
+@media (min-width:1030px){
+	.slider-2 .active{
+		width:800px !important;
+	}
+	.slider-2 .cloned{
+		width: 1035px !important;
+	}
 }
 @media (min-width: 1040px) {
 	.scrolled #menu-short {

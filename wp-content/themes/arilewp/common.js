@@ -57,6 +57,7 @@ jQuery(document).ready(function(){
     // change image
     jQuery(document).ready(function(){
         jQuery(".change-image img").click(function(){
+          jQuery('.slider-multiple .slick-slide').removeClass('slick-current');
           jQuery('.change-image').removeClass('image-active');
           jQuery(this).parent().parent().addClass('image-active');
           var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
@@ -177,3 +178,8 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function() {
   new WOW().init();
 });
+jQuery(document).ready(function(){
+  jQuery('.slider-2 .owl-nav .owl-prev').click(function(){
+    jQuery('.slider-2 .owl-stage .active').removeClass('cloned');
+  })
+})

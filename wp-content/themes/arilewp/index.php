@@ -59,7 +59,6 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
                     <a class="popup-vimeo" href="https://www.youtube.com/watch?v=jOeEJ0EaNME">
                         <i class="fas fa-play" aria-hidden="true"> Watch Video</i></a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -70,8 +69,8 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         </div>
         <div class="more">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 more-6  wow fadeInUp">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 more-6  wow fadeInUp">
                     <h2 class="text-center">MORE ROSEWOOD</h2>
                     <h4 class="text-center">ENJOY A COMPLIMENTARY NIGHT</h4>
                     <p>Enjoy a complimentary night on your stay with More Rosewood. Escape to the warmth of the
@@ -82,12 +81,9 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
                         destination
                         with more time to roam.</p>
                     <a href="#" class="button border dynamic-width"
-                        aria-label="View Properties with this offer - enjoy a complimentary night">View Properties
-                        with
-                        this
-                        offer</a>
+                        aria-label="View Properties with this offer - enjoy a complimentary night">View Properties with  this offer</a>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-2"></div>
             </div>
         </div>
     </div>
