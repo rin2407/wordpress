@@ -2905,6 +2905,10 @@ ul#menu,
 .scrolled .logo-hotel .l-hotel{
 	display:none;
 }
+.check-in-out{ 
+	border:none !important;
+	padding-top: 0px !important;
+}
 .search-sec{
 	padding: 2rem;
 	margin-top: -60px;
@@ -3354,7 +3358,7 @@ color: #000032;
 	padding-top:30px;
 	padding-bottom: 20px;
 }
-
+/* calender */
 .product-grid6,.product-grid6 .product-image6{overflow:hidden}
 .product-grid6{font-family:'Open Sans',sans-serif;text-align:center;position:relative;transition:all .5s ease 0s}
 .product-grid6:hover{box-shadow:0 0 10px rgba(0,0,0,.3)}

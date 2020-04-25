@@ -7,7 +7,9 @@ window.onscroll = function() {
         nav.classList.remove("scrolled");
     }
 }
-
+jQuery(document).ready(function(){
+  jQuery('.check-in-out').daterangepicker();
+})
 //slick
 jQuery(document).ready(function(){
     jQuery('.slider').slick({

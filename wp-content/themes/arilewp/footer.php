@@ -123,7 +123,6 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
 <!--/Page Scroll to Top-->
 <?php endif; ?>
 <?php wp_footer(); ?>
-
 </body>
 
 </html>

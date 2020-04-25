@@ -8,7 +8,6 @@
     <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
     <link rel="pingback" href="<?php esc_url(bloginfo( 'pingback_url' )); ?>">
     <?php endif; ?>
-
     <?php wp_head(); ?>
 </head>
 <?php 
@@ -57,7 +56,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
                             <h5>CHECK IN-CHECK OUT</h5>
-                            <P>Wed Apr 08 - Thu Apr 09</P>
+                            <input type="text" class="check-in-out text-center" value="">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
                             <h5>GUESTS</h5>
