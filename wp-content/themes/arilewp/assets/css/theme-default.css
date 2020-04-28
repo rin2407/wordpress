@@ -134,8 +134,8 @@ td a {
 =>> Theme Page Header Area
 --------------------------------------------------*/
 
-.theme-page-header-area .overlay {
-    background-color: rgba(0, 123, 255, 1);
+.theme-page-header-area .overlay{
+    background-color: #000032;
 }
 
 /*--------------------------------------------------

@@ -84,6 +84,22 @@
 {
     left: -25px;
 }
+button.slick-next.slick-arrow{
+    background-image: url(
+        '../arrow-right.png'
+    );
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+button.slick-prev.slick-arrow{
+    background-image: url(
+        '../arrow-left.png'
+    );
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
 [dir='rtl'] .slick-prev
 {
     right: -25px;
@@ -91,11 +107,11 @@
 }
 .slick-prev:before
 {
-    content: '<';
+    /* content: '<'; */
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '>';
+    /* content: '>'; */
 }
 
 .slick-next
@@ -109,11 +125,11 @@
 }
 .slick-next:before
 {
-    content: '>';
+    /* content: '>'; */
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '<';
+    /* content: '<'; */
 }
 
 /* Dots */

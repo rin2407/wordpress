@@ -10,7 +10,7 @@ window.onscroll = function() {
 jQuery(document).ready(function(){
   jQuery('.check-in-out').daterangepicker();
 })
-//slick
+// slick
 jQuery(document).ready(function(){
     jQuery('.slider').slick({
         infinite: true,
@@ -20,11 +20,11 @@ jQuery(document).ready(function(){
   });
 jQuery(document).ready(function(){
   jQuery('.main-image').hover(function(){
-    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().prev().show();
-    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().next().show();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().prev().show();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().next().show();
   },function(){
-    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().prev().hide();
-    jQuery(this).parent().parent().parent().parent().parent().parent().parent().parent().next().hide();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().prev().hide();
+    jQuery(this).parent().parent().parent().parent().parent().parent().parent().next().hide();
   })
   jQuery('.slider .slick-arrow').hover(function(){
     jQuery(this).show();
@@ -49,7 +49,7 @@ jQuery(document).ready(function(){
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
               }
             }
@@ -62,15 +62,12 @@ jQuery(document).ready(function(){
           jQuery('.slider-multiple .slick-slide').removeClass('slick-current');
           jQuery('.change-image').removeClass('image-active');
           jQuery(this).parent().parent().addClass('image-active');
-          var data_header= jQuery(this).parent().parent().parent().next().children().attr('data-header');
-            var data_content= jQuery(this).parent().parent().parent().next().children().attr('data-content');
-            var a_href=jQuery(this).parent().parent().parent().next().children().children().children().attr('href');
+            var data_header=jQuery(this).parent().parent().parent().parent().next().children().children().attr('data-header');
+            var data_content= jQuery(this).parent().parent().parent().parent().next().children().children().attr('data-content');
             var change=jQuery(this).attr('src');
             jQuery(".slider .slick-active img").attr('srcset',change);
-            jQuery(".slider .slick-active .title-h2 a").html(data_header);
-            jQuery(".slider .slick-active .title-h2 a").attr('href',a_href);
+            jQuery(".slider .slick-active .title-h2").html(data_header);
             jQuery(".slider .slick-active .text-wrap p").html(data_content);
-    
         });    
     });
     // magnific video
@@ -113,20 +110,22 @@ jQuery(document).ready(function(){
   //
   jQuery(document).ready(function(){
     jQuery('.owl2 ').owlCarousel({
-      stagePadding: 50,
       loop:true,
-      margin:10,
+      margin:0,
       nav:true,
       Dots:false,
+      navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
       responsive:{
           0:{
               items:1
           },
-          600:{
-              items:1
+          800:{
+              items:1,
+              stagePadding: 50,
           },
           1000:{
-              items:1
+              items:1,
+              stagePadding: 200,
           }
       }
     })
@@ -174,6 +173,13 @@ jQuery(document).ready(function(){
     function(){
       jQuery(this).children().css("opacity","100%");
       jQuery(this).parent().next().css("opacity","0%");
+    })
+    jQuery('.slider-3 .title').hover(function(){
+      jQuery(this).css("opacity","80%");
+    },
+    function(){
+      jQuery(this).children().css("opacity","100%");
+      jQuery(this).css("opacity","0%");
     })
 })
 // wow

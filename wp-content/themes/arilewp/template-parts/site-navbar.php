@@ -7,7 +7,7 @@ $arilewp_menu_container_size = get_theme_mod('arilewp_menu_container_size', 'con
     <div class="row mt-4 header-start">
         <div class="col-md-4"></div>
         <div class="col-md-4 logo-hotel float-right">
-            <img src="https://fareast.net.au/wp-content/uploads/2018/02/Rosewood-Hotel-Logo-v2.png" class="l-hotel"
+            <img src="<?php bloginfo('template_url'); ?>/header_tagline_WHITEen_170x59.png" class="l-hotel"
                 alt="">
         </div>
         <div class="col-md-4 language">

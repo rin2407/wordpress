@@ -37,10 +37,14 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
                     <div class="col-md-10 icon">
                         <a href=""><span><i class="fas fa-share-alt"></i></span></a>
                         <a href=""><span><i class="fas fa-sms"></i></span></a>
-                        <a href="https://www.facebook.com/RosewoodHotels?ref=ts" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
-                        <a href="https://twitter.com/RosewoodHotels" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
-                        <a href="https://www.pinterest.com/rosewoodhotels/" target="_blank"><span><i class="fab fa-pinterest"></i></span></a>
-                        <a href="https://www.instagram.com/rosewoodhotels/" target="_blank"><span><i class="fab fa-instagram-square"></i></span></a>
+                        <a href="https://www.facebook.com/RosewoodHotels?ref=ts" target="_blank"><span><i
+                                    class="fab fa-facebook-f"></i></span></a>
+                        <a href="https://twitter.com/RosewoodHotels" target="_blank"><span><i
+                                    class="fab fa-twitter-square"></i></span></a>
+                        <a href="https://www.pinterest.com/rosewoodhotels/" target="_blank"><span><i
+                                    class="fab fa-pinterest"></i></span></a>
+                        <a href="https://www.instagram.com/rosewoodhotels/" target="_blank"><span><i
+                                    class="fab fa-instagram-square"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -68,11 +72,14 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
                                 class="_lightbox with-arrow gtm-footer cboxElementn float-left">See
                                 All Toll-Free
                                 Numbers</a>
+                                <br>
+                            <a href="" class="btn btn-outline-secondary a-rate mt-3">CHECK RATES</a>
+                            <a href="" class="btn btn-outline-secondary a-contact mt-3">CONTACT US</a>
                         </div>
                     </div>
                     <div class="col-md-4">
-                    <div class="links-content">
-                        <?php 
+                        <div class="links-content">
+                            <?php 
 						wp_nav_menu( array(
 							 'theme_location'  => 'primary',
 							 'container'       => 'div',
@@ -83,15 +90,20 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
 							 'walker'          => new wp_bootstrap_navwalker()
 						) );
 					?>
-                    </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                    <div class="title-h5"><strong>Stay in Touch</strong></div>
+                        <div class="title-h5"><strong>Stay in Touch</strong></div>
                         <br>
                         <p>Sign up now to receive special offers and promotions.</p>
                         <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button class="btn btn-outline-secondary btn-block btn-sm btn-mail mt-2"> Submit</button>
+                            <div class="input-group mb-3 email">
+                                <input type="text" class="form-control" placeholder="Enter your email"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -31,23 +31,22 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
             <?php get_template_part('template-parts/content')?>
             <?php endwhile; ?>
             <?php else : ?>
-            <?php get_template_part('content','none') ?>
+                <?php get_template_part('template-past/content','none') ?>
             <?php endif; ?>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="slider-multiple wow fadeInUp">
+<div class="container-fluid">
+    <div class="slider-multiple wow fadeInUp mt-2">
         <?php
 if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <?php get_template_part('template-parts/content-slider')?>
         <?php endwhile; ?>
         <?php else : ?>
-        <?php get_template_part('content','none') ?>
+            <?php get_template_part('template-past/content','none') ?>
         <?php endif; ?>
     </div>
 </div>
-<div class="container">
     <div class="video  wow fadeInUp">
         <div class="row">
             <div class="col-md-8"></div>
@@ -56,15 +55,13 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
                     <h2 class="wow bounceInDown">ROSEWOOD LIMITED EDITION</h2>
                 </div>
                 <div class="play mt-2 wow fadeInDownBig">
-                    <a class="popup-vimeo" href="https://www.youtube.com/watch?v=jOeEJ0EaNME">
+                    <a class="popup-vimeo" href="https://www.youtube.com/watch?v=Nk-isYXzUsg">
                         <i class="fas fa-play" aria-hidden="true"> Watch Video</i></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
 <div class="more-color">
-    <div class="container">
         <div class="background-more  wow fadeInUp">
         </div>
         <div class="more">
@@ -86,10 +83,9 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
                 <div class="col-md-2"></div>
             </div>
         </div>
-    </div>
 </div>
 <div class="feature-des">
-    <div class="container">
+    <div class="container-fluid">
         <div class="slider-2 wow fadeInUp">
             <h2 class="text-center title-feature">FEATURED DESTINATIONS</h2>
             <div class="owl-carousel owl-theme owl2">
@@ -106,7 +102,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 </div>
 <!-- end -->
 <div class="through-eyes  wow fadeInUp">
-    <div class="container">
+    <div class="container-fluid">
         <h2 class="text-center through">THROUGH YOUR EYES</h2>
         <p class="text-center">Explore Rosewood through the eyes of our guests.<br>
          Share your own Rosewood journey by using <a rel="noopener noreferrer" href="https://www.instagram.com/rosewoodhotels/" target="_blank">@RosewoodHotels</a>&nbsp;and&nbsp;<a rel="noopener noreferrer" href="https://www.instagram.com/explore/tags/rwjourneys/" target="_blank">#RWJourneys</a>.</p>
@@ -121,12 +117,12 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
             </div>
             <?php endwhile; ?>
             <?php else : ?>
-            <?php get_template_part('content','none') ?>
+                <?php get_template_part('template-past/content','none') ?>
             <?php endif; ?>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-fluid">
 <h2 class="text-center more-rosewood wow fadeInUp">MORE FROM ROSEWOOD</h2>
     <div class="row mt-4 mb-4">
         <?php
@@ -136,7 +132,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         </div>
         <?php pagination_tdc(); ?>
         <?php else : ?>
-        <?php get_template_part('content','none') ?>
+            <?php get_template_part('template-past/content','none') ?>
         <?php endif; ?>
 </div>
 <?php

@@ -35,13 +35,16 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://i.ytimg.com/vi/MU0Yp0qmYEs/maxresdefault.jpg" class="d-block w-100" alt="...">
+                <img src="<?php bloginfo('template_url'); ?>/RHR_LDBOpening_Hero_2_1920x902.png" class="d-block w-100"
+                    alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/3ssL8vx7Xhg/maxresdefault.jpg" class="d-block w-100" alt="...">
+                <img src="<?php bloginfo('template_url'); ?>/RHR_LDBOpening_Hero_3_1920x902.png" class="d-block w-100"
+                    alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/MU0Yp0qmYEs/maxresdefault.jpg" class="d-block w-100" alt="...">
+                <img src="<?php bloginfo('template_url'); ?>/RHR_LDBOpening_Hero_2_1920x902.png" class="d-block w-100"
+                    alt="...">
             </div>
         </div>
     </div>
@@ -50,21 +53,36 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
+                        <div class="col-md-1"></div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
                             <h5>DESTINATION</h5>
-                            <P>Select a hotel or resort</P>
+                            <div class="input-group mb-3 s-search">
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected> Select a hotel or resort</option>
+                                    <?php
+                                    if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+                                    <option value="<?php the_title();?>"> <?php the_title(); ?></option>
+                                    <?php endwhile; ?>
+                                    <?php else : ?>
+                                    <?php get_template_part('content','none') ?>
+                                    <?php endif; ?>
+                                </select>
+                            </div>
+
+
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
                             <h5>CHECK IN-CHECK OUT</h5>
                             <input type="text" class="check-in-out text-center" value="">
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
+                        <div class="col-lg-2 col-md-2 col-sm-12 p-0 carousel-bottom text-center">
                             <h5>GUESTS</h5>
                             <P>1Room • 1Adult • 0Child</P>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0 carousel-bottom text-center">
+                        <div class="col-lg-2 col-md-2 col-sm-12 p-0 carousel-bottom text-center">
                             <a href="#" class="btn btn-primary btn-lg mt-2 check-rate">CHECK RATES</a>
                         </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
