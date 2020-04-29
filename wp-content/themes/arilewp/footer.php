@@ -136,5 +136,5 @@ $arilewp_scroll_to_top_enabled = get_theme_mod('arilewp_scroll_to_top_enabled', 
 <?php endif; ?>
 <?php wp_footer(); ?>
 </body>
-
+<script src="<?php bloginfo('template_url'); ?>/common.js"></script>
 </html>

@@ -366,7 +366,10 @@ function css_style(){
     wp_enqueue_style('carousel-theme');
 	// calenders
 	wp_register_style('calender-theme',get_template_directory_uri() . "/css/daterangepicker.css",'all');
-    wp_enqueue_style('calender-theme');
+	wp_enqueue_style('calender-theme');
+	//
+	// wp_register_style('conversation-theme',get_template_directory_uri() . "/conversation.css",'all');
+    // wp_enqueue_style('conversation-theme');
 	
 }
 add_action('wp_enqueue_scripts','css_style');
@@ -381,8 +384,8 @@ function theme_js(){
     wp_register_script('magnific-script',get_template_directory_uri() . "/js/jquery.magnific-popup.js");
     wp_enqueue_script('magnific-script');
     //
-    wp_register_script('common-script',get_template_directory_uri() . "/common.js");
-    wp_enqueue_script('common-script');
+    // wp_register_script('common-script',get_template_directory_uri() . "/common.js");
+    // wp_enqueue_script('common-script');
     wp_register_script('magnifict-script',get_template_directory_uri() . "/js/jquery.magnific-popup.js");
     wp_enqueue_script('magnifict-script');
     // carousel
