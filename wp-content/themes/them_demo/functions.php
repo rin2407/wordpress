@@ -116,8 +116,30 @@ if( !function_exists('theme_pagination')){
 /*hien thi thumbnail */
 if(!function_exists('theme_thumbnail')){
     function theme_thumbnail($size){
-        if(!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
+        if(is_single() || is_home() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
 <figure class="post-thumbnail"> <?php the_post_thumbnail($size) ?></figure>
+<?php endif; ?>
+<?php
+
+    }
+}
+// thumbnail owl
+if(!function_exists('theme_thumbnail_owl')){
+    function theme_thumbnail_owl($size){
+        if(is_single() || is_home() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
+<figure class="item"><?php the_post_thumbnail($size) ?></figure>
+<?php endif; ?>
+<?php
+
+    }
+}
+
+if(!function_exists('theme_thumbnail_a')){
+    function theme_thumbnail_a($size){
+        if(!is_single() && has_post_thumbnail() && !post_password_required() || has_post_format('image') ) : ?>
+        <?php $imageUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );
+ ?>
+<a href="<?php echo $imageUrl ?>" title='<?php theme_entry_content(); ?>'><?php the_post_thumbnail($size) ?></a>
 <?php endif; ?>
 <?php
 
@@ -131,6 +153,18 @@ if(!function_exists('theme_entry_header')){
 <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 <?php else : ?>
 <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+<?php endif; ?>
+<?php
+    }
+}
+/* title header */
+if(!function_exists('title_header')){
+    function title_header(){
+        ?>
+<?php if( is_single() ) : ?>
+<?php the_title(); ?>
+<?php else : ?>
+<?php the_title(); ?>
 <?php endif; ?>
 <?php
     }
@@ -209,8 +243,24 @@ function css_style(){
     wp_enqueue_style('bootstrap-style');
     wp_register_style('bootstrap-theme',get_template_directory_uri() . "/css/bootstrap.css",'all');
     wp_enqueue_style('bootstrap-theme');
+    //slick
+    wp_register_style('slick-theme',get_template_directory_uri() . "/css/slick-theme.css",'all');
+    wp_enqueue_style('slick-theme');
+    wp_register_style('slick-style',get_template_directory_uri() . "/css/slick.css",'all');
+    wp_enqueue_style('slick-style');
+    // magnifict
+    wp_register_style('magnifict-theme',get_template_directory_uri() . "/css/magnific-popup.css",'all');
+    wp_enqueue_style('magnifict-theme');
+    //
+    wp_register_style('awesome-theme',get_template_directory_uri() . "/css/font-awesome.min.css",'all');
+    wp_enqueue_style('awesome-theme');
+    // aminate
+    wp_register_style('aminate-theme',get_template_directory_uri() . "/css/aminate.css",'all');
+    wp_enqueue_style('aminate-theme');
+    // owl carousel 
+    wp_register_style('carousel-theme',get_template_directory_uri() . "/css/owl.carousel.min.css",'all');
+    wp_enqueue_style('carousel-theme');
 
-    
 }
 add_action('wp_enqueue_scripts','css_style');
 function theme_js(){
@@ -222,8 +272,19 @@ function theme_js(){
     // js bootstrap
     wp_register_script('bootstrap-script',get_template_directory_uri() . "/js/bootstrap.min.js");
     wp_enqueue_script('bootstrap-script');
+    // slick js
+    wp_register_script('slick-script',get_template_directory_uri() . "/js/slick.js");
+    wp_enqueue_script('slick-script');
     ///
+    wp_register_script('magnific-script',get_template_directory_uri() . "/js/jquery.magnific-popup.js");
+    wp_enqueue_script('magnific-script');
+    //
     wp_register_script('common-script',get_template_directory_uri() . "/common.js");
     wp_enqueue_script('common-script');
+    wp_register_script('magnifict-script',get_template_directory_uri() . "/js/jquery.magnific-popup.js");
+    wp_enqueue_script('magnifict-script');
+    // carousel
+    wp_register_script('carousel-script',get_template_directory_uri() . "/js/owl.carousel.min.js");
+    wp_enqueue_script('carousel-script');
 }
 add_action('wp_enqueue_scripts','theme_js');
